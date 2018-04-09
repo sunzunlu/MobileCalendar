@@ -8,7 +8,7 @@ copyright: true
 ---
 # <font color="#F68736" face="微软雅黑">移动日历组件</font>
 
-文档维护者：`移动研发部-孙尊路 `
+文档维护者：`sunzl`
 
 ## 适用场景
 
