@@ -21,7 +21,7 @@ copyright: true
 
 - [日历示例演示，支持滑动屏幕左右切换等效果](http://app.epoint.com.cn/test/H5/Attaches/%E6%97%A5%E5%8E%86%E7%BB%84%E4%BB%B6/calendar_showcase/calendar_showcase.html) ` 注：按F12可在浏览器预览`
 
-- 示例demo源代码(H5)：[点击此处进行下载](http://app.epoint.com.cn/test/H5/Attaches/日历组件/calendar_showcase.zip)
+- 示例demo源代码(H5)：[点击此处进行下载](https://github.com/sunzunlu/MobileCalendar)
 
 
 ## 典型项目应用案例
