@@ -1,0 +1,70 @@
+/** 
+ * 作者： 孙尊路
+ * 创建时间：2017/06/16 14:47:28
+ * 版本： [1.0, 2017/6/16]
+ * 版权： 江苏国泰新点软件有限公司
+ * 描述： 我的日程 
+**/
+
+
+/*全局格式化样式*/
+
+body,
+.mui-content {
+	background-color: #F5F5F5;
+}
+
+
+/*日历*/
+
+.em-calendar {
+	border-bottom: 1px solid #e0e0e0;
+}
+
+
+/*左右切换*/
+
+.em-journal-title {
+	width: 100%;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	background-color: #3C80E6;
+}
+
+.em-per-block {
+	float: left;
+	width: 33%;
+	color: #fff;
+	font-size: 18px;
+}
+
+.em-per-block.pre {
+	text-align: left;
+	font-size: 15px;
+}
+
+.em-per-block.next:active,
+.em-per-block.pre:active {
+	background-color: #3a79d8;
+	border-radius: 15px;
+	font-weight: 800;
+}
+
+.em-per-block.mid {
+	text-align: center;
+	font-size: 18px;
+}
+
+.em-per-block.next {
+	text-align: right;
+	font-size: 15px;
+}
+
+.backToday {
+	background: #3c80e6;
+	color: #fff;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+}
