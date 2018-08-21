@@ -1,0 +1,59 @@
+<!-- 
+        作者： 孙尊路
+        创建时间：2018-04-08 13:26:47
+        版本： [1.0, 2018/04/08]
+        版权： 江苏国泰新点软件有限公司
+        描述： 日历组件  皮肤完善   可直接使用
+-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>日历组件</title>
+		<!-- H5页面窗口自动调整到设备宽度，并控制用户缩放页面 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!-- IOS中禁用将数字识别为电话号码/忽略Android平台中对邮箱地址的识别 -->
+		<meta name="format-detection" content="telephone=no, email=no" />
+
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="libs/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="libs/calendar_base.css" />
+		<link rel="stylesheet" type="text/css" href="css/showcase.css" />
+
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+			<div class="em-journal-title">
+				<div class="em-per-block pre">
+					<span class="mui-icon mui-icon-arrowleft"></span>
+					<span>上一月</span>
+				</div>
+				<div class="em-per-block mid">
+					<span>...</span>
+				</div>
+				<div class="em-per-block next">
+					<span>下一月</span>
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+			</div>
+
+			<!--日历容器-->
+			<div id="calendar">
+
+			</div>
+		</div>
+
+		<!--返回今天-->
+		<div class="backToday">
+			返回今天
+		</div>
+		<script src="libs/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/calendar_base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/calendar_showcase.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
