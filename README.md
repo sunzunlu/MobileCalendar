@@ -1,25 +1,18 @@
----
-title: 移动日历组件
-date: 2018-04-08 19:16:59
-tags: 移动日历组件
-categories: 移动日历
-copyright: true
 
----
-# <font color="#F68736" face="微软雅黑">移动日历组件</font>
+文档维护者：`sunzl `
 
-文档维护者：`sunzl`
+喜欢的话，记得`star` 一下噢！
 
 ## 适用场景
 
-- 该组件目前仅适用于移动端H5页面展示，后期高级用法中会讲述到如何基于日历基类实现自定义模板传入。（即：开发者只需要传入自己的模板即可实现出自己的优美的日历出来。） `本篇主要是带大家入门日历组件的使用，该文档后面会持续优化更新。若有不足，请大家多多指教，作者会及时更正！`
+- 该组件目前仅适用于移动端H5页面展示，后期高级用法中会讲述到如何基于日历基类实现自定义模板传入。（即：开发者只需要传入自己的模板即可实现出自己的优美的日历出来。） `本篇主要是带大家入门日历组件的使用，该文档后面会持续优化更新。若有不足，请大家多多指教，小编会及时更正！`
 
 
 ## 实例展示
-![](http://app.epoint.com.cn/test/H5/epointmobileWiKi/assets/005/20180408-1d1fec76.gif)  
+![](http://ydyfcs.epoint.com.cn:8066/doc/ydyf3z/assets/005/20180408-1d1fec76.gif)  
 
 
-- [日历示例演示，支持滑动屏幕左右切换等效果](http://app.epoint.com.cn/test/H5/Attaches/%E6%97%A5%E5%8E%86%E7%BB%84%E4%BB%B6/calendar_showcase/calendar_showcase.html) ` 注：按F12可在浏览器预览`
+- [日历示例演示，支持滑动屏幕左右切换等效果](http://ydyfcs.epoint.com.cn:8066/H5/Attaches/%E6%97%A5%E5%8E%86%E7%BB%84%E4%BB%B6/calendar_showcase/calendar_showcase.html) ` 注：按F12可在浏览器预览`
 
 - 示例demo源代码(H5)：[点击此处进行下载](https://github.com/sunzunlu/MobileCalendar)
 
@@ -32,7 +25,7 @@ copyright: true
 ## 依赖资源
 
 - `libs/calendar_base.js` 日历组件基类js库
-- `libs/calendar_base.css` 日历组件基类css库，根据业务需求，可以任意个性化，从而达到设计视觉效果
+- `libs/calendar_base.css` 日历组件基类css库，可以根据业务需求，任意个性化，从而达到设计视觉效果
 
 ## 配置和使用方法
 
@@ -46,7 +39,7 @@ __DOM结构__
 
 __初始化__
 
-以下代码是最简单的用法，更多复杂用法请参考`calendar_showcase`[源码下载](http://app.epoint.com.cn/test/H5/Attaches/日历组件/calendar_showcase.zip)
+以下代码是最简单的用法，更多复杂用法请参考`calendar_showcase`[源码下载](https://github.com/sunzunlu/MobileCalendar)
 
 ```js
 var calendar = new Calendar({
@@ -99,16 +92,46 @@ calendar.refresh({
     day: "08"
 });
 ```
+
 __参数说明__
 
 | 参数 | 参数类型  | 说明  |
 | :------------- |:-------------:|:-------------|
 | {} | object | `必选` 日期对象必须传入以下格式：{year:"2018",month:"04",day:"08"}  |
 
+### slidePrev()
+
+`切换为上一个月`，与组件内部传入参数`pre`作用一样，该API支持Promise异步成功回调里处理自己的业务逻辑。
+
+```js
+calendar.slidePrev().then(...).then(...);
+```
+
+### slideNext()
+
+`切换为下一个月`，与组件内部传入参数`next`作用一样，该API支持Promise异步成功回调里处理自己的业务逻辑。
+
+```js
+calendar.slideNext().then(...).then(...);
+```
+
+### addActiveStyleFordate()
+
+`给特定日期新增选中激活样式`,比如：把日期`2018-08-21`标记位已选中状态。
+
+```js
+calendar.addActiveStyleFordate("2018-08-21");
+```
+__参数说明__
+
+| 参数 | 参数类型  | 说明  |
+| :------------- |:-------------:|:-------------|
+| "2018-08-21" | String | `必选` 日期格式必须符合以下格式：2018-08-21  |
 
 ### refreshData()
 
 会获取整个月的日历数据（`6 * 7 = 42`方格的日期），可根据该API自行个性化开发自己的日历组件，例如：
+
 ```js
 calendar.refreshData({
     year: "2018",
@@ -130,6 +153,8 @@ function(output, data) {
 ```html
 <div class="em-calendar-item  isforbid0"date="2018-03-25"><span class="day">25</span><p class="lunar">初九</p></div>
 ```
+## 优点和好处
+能够极大方便实际项目上开发人员的上手使用，而且版本是不断根据实际项目上的需求进行优化升级的，开放源码可以让特殊需求的项目开发人员进行修改、补充和完善。
 
-## 资料
-- [参考](https://sunzunlu.github.io/2018/04/08/20180408-%E7%A7%BB%E5%8A%A8%E7%AB%AFH5%E6%97%A5%E5%8E%86%E7%BB%84%E4%BB%B6/) 
+## 存在的不足之处
+可能对于前端中、高级程序员而言，一看引入了多个js库，就觉得依赖的东西太多，实际上小编正在尽力`剥离第三方js库`,方案已经有了，只不过需要一点时间进行代码重构，若在此之前给你带来的不便，还请多多包涵，毕竟`优化组件`确实需要花费大量时间的。
