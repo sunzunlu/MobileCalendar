@@ -1,7 +1,8 @@
 /**
  * 作者： 孙尊路
- * 创建时间： 2017/06/16 13:27:09
- * 版本： [1.0, 2017/6/16]
+ * 创建时间： 2018/08/21 13:27:09
+ * 版本： [1.0, 2018/08/21]
+ * 版权： 江苏国泰新点软件有限公司
  * 描述：  日历组件示例
  */
 
@@ -44,6 +45,10 @@ var customBiz = {
 				var defaultDate = item.date;
 				// 设置标题
 				setTitle(defaultDate);
+				
+				// 动态新增点击样式
+				calendar.addActiveStyleFordate(defaultDate);
+				
 			},
 			// 调试
 			isDebug: false
