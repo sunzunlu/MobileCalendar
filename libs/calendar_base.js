@@ -2,7 +2,6 @@
  * 作者: 孙尊路
  * 创建时间: 2017-07-14 13:26:47
  * 版本: [1.0, 2017/7/14]
- * 版权: 江苏国泰新点软件有限公司
  * 说明： 常用工具js
  */
 window.innerCalendarUtil = window.innerCalendarUtil || (function (exports) {
